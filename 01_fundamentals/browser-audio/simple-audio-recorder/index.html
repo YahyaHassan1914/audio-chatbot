@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple MediaRecorder + audio playback</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Record, then play</h1>
+      <p class="hint">
+        Microphone → <code>MediaRecorder</code> → <code>Blob</code> → <code>URL.createObjectURL</code> →
+        <code>&lt;audio&gt;</code>.
+      </p>
+      <div class="row">
+        <button type="button" id="btnStart">Start recording</button>
+        <button type="button" id="btnStop" disabled>Stop</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Idle — press Start.</p>
+      <audio id="player" controls></audio>
+    </main>
+    <script src="app.js" defer></script>
+  </body>
+</html>
