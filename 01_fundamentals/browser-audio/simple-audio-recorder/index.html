@@ -5,21 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple MediaRecorder + audio playback</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <main class="wrap">
-      <h1>Record, then play</h1>
-      <p class="hint">
+    <main class="audio-recorder" role="main">
+      <h1 class="audio-recorder__title">Record, then play</h1>
+      <p class="audio-recorder__description">
         Microphone → <code>MediaRecorder</code> → <code>Blob</code> → <code>URL.createObjectURL</code> →
         <code>&lt;audio&gt;</code>.
       </p>
-      <div class="row">
-        <button type="button" id="btnStart">Start recording</button>
-        <button type="button" id="btnStop" disabled>Stop</button>
+      <div class="audio-recorder__controls" role="group" aria-label="Recording controls">
+        <button
+          type="button"
+          id="btnStart"
+          class="audio-recorder__button audio-recorder__button--primary"
+          aria-describedby="status">
+          Start recording
+        </button>
+        <button
+          type="button"
+          id="btnStop"
+          class="audio-recorder__button"
+          disabled
+          aria-describedby="status">
+          Stop
+        </button>
       </div>
-      <p id="status" class="status" role="status" aria-live="polite">Idle — press Start.</p>
-      <audio id="player" controls></audio>
+      <p id="status" class="audio-recorder__status" role="status" aria-live="polite">
+        Idle — press Start.
+      </p>
+      <audio
+        id="player"
+        class="audio-recorder__player"
+        controls
+        aria-label="Recorded audio playback">
+      </audio>
     </main>
-    <script src="app.js" defer></script>
   </body>
 </html>

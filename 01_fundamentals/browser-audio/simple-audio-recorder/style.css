@@ -42,38 +42,37 @@ body {
 }
 
 /* Main card container */
-.wrap {
+.audio-recorder {
   max-width: 36rem;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   padding: 1.5rem 1.25rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  margin-top: 2rem;
 }
 
 /* Page title */
-h1 {
+.audio-recorder__title {
   margin: 0 0 0.5rem;
   font-size: 1.35rem;
   font-weight: 650;
 }
 
 /* Intro helper text */
-.hint {
+.audio-recorder__description {
   margin: 0 0 1rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
 /* Monospace style for inline code labels */
-.hint code {
+.audio-recorder__description code {
   font-family: var(--mono);
   font-size: 0.88em;
 }
 
 /* Horizontal layout for action buttons */
-.row {
+.audio-recorder__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -81,7 +80,7 @@ h1 {
 }
 
 /* Shared button styles */
-button {
+.audio-recorder__button {
   font: inherit;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -91,33 +90,33 @@ button {
   color: var(--text);
 }
 
-/* Primary emphasis for the first button (Start) */
-button:first-of-type {
+/* Primary button variant (Start button) */
+.audio-recorder__button--primary {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
 }
 
-/* Small visual feedback on hover */
-button:hover:not(:disabled) {
+/* Button hover state */
+.audio-recorder__button:hover:not(:disabled) {
   filter: brightness(1.08);
 }
 
-/* Muted look for disabled controls */
-button:disabled {
+/* Button disabled state */
+.audio-recorder__button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
 }
 
 /* Status message text */
-.status {
+.audio-recorder__status {
   margin: 0 0 0.75rem;
   font-size: 0.95rem;
   color: var(--muted);
 }
 
-/* Make audio player fill container width */
-#player {
+/* Audio player */
+.audio-recorder__player {
   display: block;
   width: 100%;
   margin-top: 0.25rem;
