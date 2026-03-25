@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==========================
+         Meta Configuration
+    ========================== -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- ==========================
+         Document Title
+    ========================== -->
+    <title>Audio Visualizer</title>
+
+    <!-- ==========================
+         Stylesheet
+    ========================== -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- ==========================
+     Application Script
+    ========================== -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+<main class="audio-visualizer" role="main">
+
+    <!-- ==========================
+         Controls Section
+    ========================== -->
+    <section
+            class="audio-visualizer__controls"
+            aria-label="Audio visualizer controls"
+    >
+        <header class="audio-visualizer__header">
+            <h1 class="audio-visualizer__title">
+                Audio Visualizer
+            </h1>
+            <p class="audio-visualizer__description">
+                Visualize live microphone input with frequency bars and waveform.
+            </p>
+        </header>
+
+        <!-- ==========================
+             Control Buttons
+        ========================== -->
+        <div
+                class="audio-visualizer__button-group"
+                role="group"
+                aria-label="Microphone controls"
+        >
+            <button
+                    id="btnStart"
+                    type="button"
+                    class="audio-visualizer__button audio-visualizer__button--primary"
+                    aria-controls="canvas"
+            >
+                Start
+            </button>
+
+            <button
+                    id="btnStop"
+                    type="button"
+                    class="audio-visualizer__button"
+                    disabled
+                    aria-controls="canvas"
+            >
+                Stop
+            </button>
+        </div>
+    </section>
+
+    <!-- ==========================
+         Visualization Canvas
+    ========================== -->
+    <section
+            class="audio-visualizer__stage"
+            aria-label="Audio visualization display"
+    >
+        <canvas
+                id="canvas"
+                class="audio-visualizer__canvas"
+                role="img"
+                aria-label="Real-time audio visualization showing frequency bars and waveform"
+        >
+            Your browser does not support the canvas element.
+        </canvas>
+    </section>
+
+</main>
+</body>
+</html>
