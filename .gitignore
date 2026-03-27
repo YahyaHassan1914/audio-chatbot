@@ -3,3 +3,18 @@
 *.iml
 out
 gen
+
+# Node
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime uploads / temp artifacts
+**/uploads/
+**/.DS_Store
+
+# Env files
+.env
+.env.*
