@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Upload HTTP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="audio-upload-http">
+    <h1 class="audio-upload-http__title">Audio Upload HTTP</h1>
+    <p class="audio-upload-http__description">
+      Upload an audio file to the server.
+    </p>
+
+    <form class="audio-upload-http__form">
+      <label for="audioFile">Choose an audio file (max 5MB)</label>
+      <input type="file" id="audioFile" class="audio-upload-http__input" accept="audio/*" required />
+
+      <button type="submit" class="audio-upload-http__button">
+        Upload
+      </button>
+    </form>
+
+    <p class="audio-upload-http__status" role="status" aria-live="polite">
+      No file uploaded yet
+    </p>
+  </main>
+</body>
+
+</html>
