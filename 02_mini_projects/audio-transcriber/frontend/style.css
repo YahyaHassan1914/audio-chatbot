@@ -1,0 +1,149 @@
+/* =========================
+   Reset & Base
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg: #f5f7fb;
+    --color-card: #ffffff;
+    --color-primary: #4f46e5;
+    --color-primary-hover: #4338ca;
+    --color-text: #1f2933;
+    --color-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --transition: 0.2s ease-in-out;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   Layout
+========================= */
+.transcriber {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 420px;
+    width: 100%;
+}
+
+/* =========================
+   Header
+========================= */
+.transcriber__header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.transcriber__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.transcriber__description {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+}
+
+/* =========================
+   Form
+========================= */
+.transcriber__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transcriber__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.transcriber__label {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.transcriber__input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    transition: border var(--transition), box-shadow var(--transition);
+}
+
+.transcriber__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* =========================
+   Button
+========================= */
+.transcriber__button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.transcriber__button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.transcriber__button:active {
+    transform: scale(0.98);
+}
+
+.transcriber__button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   Status / Feedback
+========================= */
+.transcriber__feedback {
+    margin-top: 1.2rem;
+}
+
+.transcriber__status {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* Optional states */
+.transcriber__status--success {
+    color: #16a34a;
+}
+
+.transcriber__status--error {
+    color: #dc2626;
+}

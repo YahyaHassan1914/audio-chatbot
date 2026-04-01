@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Upload an audio file and transcribe it using a backend service."/>
+    <title>Audio Transcriber</title>
+
+    <link rel="stylesheet" href="./style.css"/>
+
+    <script type="module" src="./app.js"></script>
+</head>
+
+<body>
+<main class="transcriber">
+    <header class="transcriber__header">
+        <h1 class="transcriber__title">Audio Transcriber</h1>
+        <p class="transcriber__description">
+            Upload an audio file to transcribe it on the server.
+        </p>
+    </header>
+
+    <section class="transcriber__upload">
+        <form class="transcriber__form" id="uploadForm" novalidate>
+
+            <div class="transcriber__field">
+                <label for="audio-file" class="transcriber__label">
+                    Choose an audio file (max 5MB)
+                </label>
+                <input type="file" id="audio-file" name="audio" class="transcriber__input" accept="audio/*" required/>
+            </div>
+
+            <button type="submit" class="transcriber__button">
+                Transcribe
+            </button>
+        </form>
+    </section>
+
+    <section class="transcriber__feedback">
+        <p id="status" class="transcriber__status" role="status" aria-live="polite">
+            No file uploaded yet.
+        </p>
+    </section>
+</main>
+</body>
+</html>
